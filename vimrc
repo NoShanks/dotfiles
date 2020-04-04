@@ -157,5 +157,23 @@ call plug#begin('~/.vim/plugged')
 
 " Make sure you use single quotes
 Plug 'mhinz/vim-startify'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+Plug 'easymotion/vim-easymotion'
+Plug 'ctrlpvim/ctrlp.vim'
 " Initialize plugin system
 call plug#end()
+
+"用于vim-easymotion的映射
+nmap ss <Plug>(easymotion-s2)
+
+"用于nerdtree的映射
+"" for nerdtree
+let mapleader=','
+nnoremap <leader>v :NERDTreeFind<cr>
+nnoremap <leader>g :NERDTreeToggle<cr>
+let NERDTreeShowHidden=1
+let NERDTreeIgnore = [
+            \ '\.git$', '\.hg$', '\.svn$', '\.stversions$', '\.pyc$', '\.pyo$', '\.svn$', '\.swp$',
+            \ '\.DS_Store$', '\.sass-cache$', '__pycache__$', '\.egg-info$', '\.ropeproject$',
+            \ ]
