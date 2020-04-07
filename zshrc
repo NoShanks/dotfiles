@@ -144,5 +144,9 @@ zplug load
 # bindkey "cc" clear-screen
 
 # fzf config, must brew install fzf
+export FZF_COMPLETION_TRIGGER=','
+export FZF_DEFAULT_OPTS='--preview "[[ $(file --mime {}) =~ binary ]] && echo {} is a binary file || (ccat --color=always {} || highlight -O ansi -l {} || cat {}) 2> /dev/null | head -500"'
 # NOTE: put this line in the end of your zshrc, or it may not work, https://github.com/junegunn/fzf/issues/1304
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh 
+
+
