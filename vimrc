@@ -121,6 +121,10 @@ Plug 'junegunn/fzf.vim'
 " Initialize plugin system
 call plug#end()
 
+"airline显示smarter tab line
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme = 'wombat'
+
 "autopairs
 let g:AutoPairs = {'(':')', '[':']', '{':'}',"'":"'",'"':'"', "`":"`", '```':'```', '"""':'"""', "'''":"'''",'<':'>'}
 
