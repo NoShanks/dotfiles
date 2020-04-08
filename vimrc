@@ -118,6 +118,7 @@ Plug 'dhruvasagar/vim-table-mode'
 Plug 'preservim/nerdtree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'junegunn/vim-peekaboo'
 " Initialize plugin system
 call plug#end()
 
