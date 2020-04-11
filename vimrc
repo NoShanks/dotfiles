@@ -125,9 +125,10 @@ call plug#end()
 "airline显示smarter tab line
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme = 'wombat'
+let g:airline_powerline_fonts=1
 
-"autopairs
-let g:AutoPairs = {'(':')', '[':']', '{':'}',"'":"'",'"':'"', "`":"`", '```':'```', '"""':'"""', "'''":"'''",'<':'>'}
+"autopairs用<>自动补全的话，cout会出问题
+"let g:AutoPairs = {'(':')', '[':']', '{':'}',"'":"'",'"':'"', "`":"`", '```':'```', '"""':'"""', "'''":"'''",'<':'>'}
 
 "用于vim-easymotion的映射
 nmap ss <Plug>(easymotion-s2)
