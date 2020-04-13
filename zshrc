@@ -94,11 +94,15 @@ POWERLEVEL9K_BACKGROUND_JOBS_FOREGROUND='green'
 # Example format: plugins=(rails git textmate ruby lighthouse)
 #plugins=(git autojump zsh-autosuggestions vi-mode)
 
-#source $ZSH/oh-my-zsh.sh
+#use oh-my-zsh
+source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+#编译器路径
+#下面一条路径可以用clang最新版本11点几
+#export PATH=$HOME/bin:/usr/local/bin:$PATH
+#export PATH=$HOME/bin:/usr/local/opt/llvm@10/bin:$PATH
+export PATH=$HOME/bin:/usr/local/opt/llvm/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
