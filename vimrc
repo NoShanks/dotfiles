@@ -23,6 +23,9 @@ colorscheme desert
 set t_Co=256
 
 set wildmenu
+"补全预览窗口从粉色改成暗色
+highlight Pmenu    ctermbg=darkgrey  guifg=black 
+highlight PmenuSel ctermbg=lightgrey guifg=black
 
 " 去掉有关vi一致性模式，避免以前版本的一些bug和局限，解决backspace不能使用的问题
 set nocompatible
@@ -106,7 +109,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'easymotion/vim-easymotion'
 Plug 'mhinz/vim-startify'
-Plug 'jiangmiao/auto-pairs'
 Plug 'yggdroot/indentline'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -123,6 +125,8 @@ Plug 'tpope/vim-surround'
 "snippet和youcompleteme有点冲突
 Plug 'honza/vim-snippets'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'SirVer/ultisnips'
+Plug 'jiangmiao/auto-pairs'
 " Initialize plugin system
 call plug#end()
 
@@ -269,8 +273,10 @@ nnoremap <C-l> :Ag<CR>
 let g:fzf_preview_window = 'right:60%'
 let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %s %C(black)%C(bold)%cr"'
 
-"snippet
-
+"snippet将tab换为ctrl-s避免与coc.nvim的按键冲突
+let g:UltiSnipsExpandTrigger="<C-s>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 "coc.nvim
 " TextEdit might fail if hidden is not set.
@@ -412,3 +418,8 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+
+"coc-yank
+nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
+
+
