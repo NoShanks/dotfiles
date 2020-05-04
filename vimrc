@@ -273,12 +273,12 @@ nnoremap <C-l> :Ag<CR>
 let g:fzf_preview_window = 'right:60%'
 let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %s %C(black)%C(bold)%cr"'
 
-"snippet将tab换为ctrl-s避免与coc.nvim的按键冲突,下一输入点ctrl-b换为ctrl-n避免和tmux的冲突,上一个输入点换为ctrl-p
+"snippet将tab换为ctrl-s避免与coc.nvim的按键冲突,下一输入点ctrl-b换为ctrl-j避免和tmux的冲突,上一个输入点换为ctrl-k
 let g:UltiSnipsExpandTrigger="<C-s>"
 "let g:UltiSnipsJumpForwardTrigger="<c-b>"
 "let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-let g:UltiSnipsJumpForwardTrigger="<c-n>"
-let g:UltiSnipsJumpBackwardTrigger="<c-p>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 "coc.nvim
 " TextEdit might fail if hidden is not set.
