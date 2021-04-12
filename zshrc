@@ -3,6 +3,10 @@ export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
 export GIT=/usr/local/Cellar/git/2.26.0
 export PATH=$GIT/bin:$PATH
 
+#代理
+export http_proxy=http://127.0.0.1:7890
+export https_proxy=http://127.0.0.1:7890
+
 #B站pegasusWang的换电脑不用怕，用git同步你的 dotfiles 文件中3分钟左右的zsh配置
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
